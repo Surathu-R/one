@@ -1,7 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-      http://maven.apache.org/maven-v4_0_0.xsd">
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 ```
 <modelVersion>4.0.0</modelVersion>
@@ -13,17 +12,15 @@
 <name>Java Home myweb</name>
 <url>http://maven.apache.org</url>
 
-<!-- 🔧 Properties -->
 <properties>
     <docker.image.prefix>kammana</docker.image.prefix>
     <sonar.host.url>http://18.181.164.81:9000/</sonar.host.url>
 
-    <!-- ✅ Java compatibility -->
+    <!-- Java compatibility -->
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 </properties>
 
-<!-- 📦 Dependencies -->
 <dependencies>
     <dependency>
         <groupId>junit</groupId>
@@ -33,7 +30,6 @@
     </dependency>
 </dependencies>
 
-<!-- 📡 Repositories -->
 <repositories>
     <repository>
         <id>mydevops-feed</id>
@@ -41,7 +37,6 @@
     </repository>
 </repositories>
 
-<!-- 🚀 Distribution -->
 <distributionManagement>
     <snapshotRepository>
         <id>nexusRepo</id>
@@ -54,7 +49,6 @@
     </repository>
 </distributionManagement>
 
-<!-- 🔌 Plugin Repositories -->
 <pluginRepositories>
     <pluginRepository>
         <id>maven-central</id>
@@ -63,18 +57,17 @@
     </pluginRepository>
 </pluginRepositories>
 
-<!-- 🔥 BUILD FIX (THIS SOLVES YOUR ERROR) -->
 <build>
     <plugins>
 
-        <!-- ✅ Fix for your Jenkins error -->
+        <!-- FIX: Updated plugin (prevents your error) -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.2</version>
         </plugin>
 
-        <!-- ✅ Compiler plugin (recommended) -->
+        <!-- Recommended compiler plugin -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
